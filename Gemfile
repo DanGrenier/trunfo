@@ -61,7 +61,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 group :test do 
-  gem 'capybara', '3.29.0'
+  gem 'capybara', '3.35.0'
   gem 'selenium-webdriver', '3.142.6'
   gem 'database_cleaner'
   gem 'geckodriver-helper'

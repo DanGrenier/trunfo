@@ -1,0 +1,154 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+:root {
+  --trunfo-main:#e64a17;
+  --trunfo-light:#e67817;
+  --trunfo-dark:#d90d00;
+}
+
+$off-white: #f7f7f7;
+
+@import "~bootstrap/scss/bootstrap";
+
+
+.login_header{
+  background-color: var(--trunfo-main);
+  color: white
+}
+
+.btn-trunfo{
+  @include button-variant(#e64a17, darken(#e64a17,7.5%),darken(#e64a17,10%),lighten(#e64a17,5%),lighten(#e64a17,10%),darken(#e64a17,30%))
+}
+
+.btn-outline-trunfo {
+  @include button-outline-variant(#e64a17, #222222, lighten(#e64a17,5%), #e64a17);
+}
+
+/***************************************************/
+/* CSS for Error message formatting                */
+/***************************************************/
+
+.alert-error{
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-alert{
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+  text-align: left;
+}
+
+.alert-success{
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+.alert-notice{
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+/***************************************************/
+/* CSS to change backcolor of required field       */
+/***************************************************/
+input:required {
+  background-color: rgba(0, 200, 0, 0.05);
+}
+
+select:required{
+  background-color: rgba(0, 200, 0, 0.05); 
+}
+
+input:required:focus {
+  border: 1px solid green;
+  outline: none;
+}
+
+
+/***************************************************/
+//CSS for the Navbar
+/**************************************************/
+.content {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.navbar{
+  background: $off-white;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+
+.navbar-brand>img {
+  height: 50px;
+  width: auto;
+}
+
+/* change the link color */
+.navbar .navbar-nav .nav-link {
+  color: var(--trunfo-main);
+}
+
+.navbar .navbar-nav > li > a:hover {
+  //color: var(--trunfo-dark);
+  color: var(--trunfo-dark);
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #ccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}

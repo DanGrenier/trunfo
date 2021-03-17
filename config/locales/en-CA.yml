@@ -9,18 +9,18 @@ en:
         format: '%u%n'
   date:
     formats:
-      default: "%m/%d/%Y"
-      notime: "%m/%d/%Y"
+      default: "%Y/%m/%d"
+      notime: "%Y/%m/%d"
     order:
+      - year
       - month
-      - day
-      - year  
+      - day  
     month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
     abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]      
   time:
     formats:
-      default: "%m/%d/%Y - %l:%M:%S %p"  
-      notime: "%m/%d/%Y"
+      default: "%Y/%m/%d - %l:%M:%S %p"  
+      notime: "%Y/%m/%d"
   activerecord:
     attributes:
       user:

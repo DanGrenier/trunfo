@@ -1,0 +1,68 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+fr:
+  devise:
+    confirmations:
+      confirmed: "Votre adresse de courriel a été confirmée"
+      send_instructions: "Vous recevrez un courriel avec les instructions pour confirmer votre courriel dans quelques minutes."
+      send_paranoid_instructions: "Si votre courriel existe dans notre base de données, vous recevrez un courriel avec les instructions pour confirmer votre courriel dans quelques minutes."
+    failure:
+      already_authenticated: "Vous êtes déjà connecté"
+      inactive: "Votre compte n'est pas encore activé"
+      invalid: "Mot de passe ou %{authentication_keys} invalide"
+      locked: "Votre compte est vérouillé"
+      last_attempt: "Vous disposez d'un dernier essai avant que votre compte ne soit vérouillé"
+      not_found_in_database: "Mot de passe ou %{authentication_keys} invalide"
+      timeout: "Votre session a expirée. Veuillez vous connecter avant de poursuivre"
+      unauthenticated: "Vous devez vous connecter ou vous inscrire avant de poursuivre"
+      unconfirmed: "Vous devez confirmer votre courriel avant de poursuivre"
+    passwords:
+      edit:
+        change_my_password: 
+        change_your_password: 
+        confirm_new_password: 
+        new_password: 
+    mailer:
+      confirmation_instructions:
+        subject: "Instructions pour la confirmation"
+      reset_password_instructions:
+        subject: "Instructions pour ré-initialiser le mot de passe"
+      unlock_instructions:
+        subject: "Instructions pour dé-verouiller votre compte"
+      password_change:
+        subject: "Mot de passe changé"
+    omniauth_callbacks:
+      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+      success: "Successfully authenticated from %{kind} account."
+    passwords:
+      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+      send_instructions: "Un courriel a été envoyé avec les instructions pour changer votre mot de passe."
+      send_paranoid_instructions: "Si votre courriel existe dans notre base de données, vous recevrez un courriel avec un lien à votre addresse."
+      updated: "Votre mot de passe a été changé avec succès.Vous êtes maintenant connecté."
+      updated_not_active: "Votre mot de passe a été changé avec succès."
+    registrations:
+      destroyed: "Au revoir! Votre compte a été cancellé avec succès."
+      signed_up: "Bienvenue! Votre inscription a été acceptée."
+      signed_up_but_inactive: "Votre inscription a été acceptée. Cependant, vous ne pouvez pas vous connecter puisque votre compte n'est pas encore actif."
+      signed_up_but_locked: "Votre inscription a été acceptée. Cependant, vous ne pouvez pas vous connecter parce que votre compte est présentement désactivé."
+      signed_up_but_unconfirmed: "Un message avec un lien pour confirmer votre compte a été envoyé à votre adresse de courriel. Cliquez sur le lien pour confirmer votre compte."
+      update_needs_confirmation: "Vous avez mis à jour votre compte avec succès, mais nous devons d'abord vérifier votre nouvelle adresse de courriel. Veuillez vérifier votre nouvelle adresse de courriel et cliquer sur le lien pour activer votre compte"
+      updated: "Votre profil a été modifié avec succès."
+    sessions:
+      signed_in: ""
+      signed_out: ""
+      already_signed_out: "Déconnecté avec succès."
+    unlocks:
+      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
+      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+  errors:
+    messages:
+      already_confirmed: "was already confirmed, please try signing in"
+      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+      expired: "has expired, please request a new one"
+      not_found: "not found"
+      not_locked: "was not locked"
+      not_saved:
+        one: "Une erreur empêche %{resource} d'être sauvegardé"
+        other: "%{count} erreurs empêchent %{resource} d'être sauvegardé"

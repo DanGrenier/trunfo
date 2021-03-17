@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Pages", type: :request do 
+RSpec.describe "Home", type: :request do 
 	
 	describe "User Not Signed In" do
 	  it "returns a successful response" do
@@ -8,9 +8,9 @@ RSpec.describe "Pages", type: :request do
 	    expect(response).to be_successful
 	  end
 
-	  it "shows the home page" do 
+	  it "Shows the home page" do 
 	  	get root_path 
-	  	expect(response.body).to include("Home")
+	  	expect(response.body).to include("Welcome")
 	  end
   end
 end

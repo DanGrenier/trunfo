@@ -1,0 +1,31 @@
+en:
+  number:
+    currency:
+      format:
+        unit: '$'
+        delimiter: ','
+        separator: '.'
+        precision: 2
+        format: '%u%n'
+  date:
+    formats:
+      default: "%Y/%m/%d"
+      notime: "%Y/%m/%d"
+    order:
+      - year
+      - month
+      - day  
+    month_names: [~, Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Août, Septembre, Octobre, Novembre, Décembre]
+    abbr_month_names: [~, Jan, Fév, Mar, Avr, Mai, Jun, Juil, Août, Sept, Oct, Nov, Déc]      
+  time:
+    formats:
+      default: "%Y/%m/%d - %l:%M:%S %p"  
+      notime: "%Y/%m/%d"
+  activerecord:
+    attributes:
+      user:
+        email: "Courriel"
+        password: "Mot de passe"
+        new_password: "Nouveau Mot de passe"
+        current_password: "Mot de passe"
+        password_confirmation: "Confirmation"

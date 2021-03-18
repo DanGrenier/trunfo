@@ -13,7 +13,7 @@
   </head>
 
   <body data-controller="<%= controller_name %> <%= action_name %>">
-     <nav class = "navbar navbar-expand-md mb-4" role="navigation">
+     <nav class = "navbar navbar-expand-md" role="navigation">
       <div class = "container-fluid">
         <!-- Home Button with Logo -->
         <%= link_to root_path, class: "navbar-brand" do %>
@@ -25,7 +25,14 @@
         </button>
         <%=render "shared/menubar"%>
       </div>
+
     </nav>
+    <nav class = "navbar navbar-expand-md mb-4">
+      <div class = "container-fluid">
+        <%=render "shared/property_info"%>
+      </div>
+    </nav>
+
     <div class = "container-fluid content">
       <div class = "row">
         <div class = "col-12">

@@ -1,0 +1,6 @@
+en:
+  login:
+    email: Email
+    password: Password
+    remember_me: Remember me
+    log_in: Log In

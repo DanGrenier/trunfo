@@ -1,0 +1,9 @@
+en:
+  signup:
+    email: Email
+    password: Password
+    min_chars: "%{chars} characters minimum"
+    password_confirm: Password Confirmation
+    sign_up: Sign Up
+    log_in: Log In
+    edit_title: Edit My Account  

@@ -1,0 +1,52 @@
+<div class = "row">
+  <div class = "col-12 col-md-6 col-lg-6 offset-md-3 offset-lg-3">
+    <div class = "card ">
+      <div class = "card-header login_header">
+        <h2><%=I18n.t('signup.sign_up')%></h2>
+      </div>
+      
+      <div class = "card-body">
+        <%= form_for(resource, as: resource_name,
+                   url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+
+          <div class="form-group">
+            <%= f.label :email, (I18n.t('signup.email'))%>
+            <%= f.email_field :email, 
+            autofocus: true,
+            autocomplete: "email",
+            class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password, (I18n.t('signup.password')) %>
+            <% if @minimum_password_length %>
+              <em>
+                (<%= I18n.t('signup.min_chars',
+                chars: @minimum_password_length) %>)
+              </em>
+            <% end %>
+            <%= f.password_field :password,
+            autocomplete: "new-password",
+            class: 'form-control' %>
+          </div>
+    
+          <div class="form-group">
+            <%= f.label :password_confirmation,
+            (I18n.t('signup.password_confirm')) %>
+            <%= f.password_field :password_confirmation,
+            autocomplete: "new-password",
+            class: 'form-control' %>
+          </div>
+          <div class = "col-6 col-md-4 col-lg-4"
+             style = "padding-left: 0px">
+            <%= f.submit (I18n.t('signup.sign_up')),
+            class: 'btn btn-trunfo btn-block' %>
+          </div>
+        <% end %>
+        <br>
+      <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>    

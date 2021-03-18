@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   get '/422', :to => "errors#unacceptable"
   get '/500', :to => "errors#server_error"
 
-  root to: "pages#home"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  authenticated :user do 
+  	root to: "pages#dashboard", as: "authenticated_user"
+  end
+
+  root to: "pages#home"
+  
 end

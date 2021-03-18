@@ -1,0 +1,9 @@
+fr:
+  signup:
+    email: Courriel
+    password: Mot de passe 
+    min_chars: "%{chars} caractères minimum"
+    password_confirm: Confirmation du Mot de passe
+    sign_up: Inscription 
+    log_in: Log In
+    edit_title: Modifier Mon Compte

@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   	root to: "pages#dashboard", as: "authenticated_user"
   end
 
+  authenticate :user do 
+    resources :properties
+     get '/select_property' => "properties#select"
+  end
+
   root to: "pages#home"
   
 end

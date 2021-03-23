@@ -1,0 +1,18 @@
+<div class = "row">
+  <div class = "col-12">
+    <h2 class = "text-center trunfo-main">
+      <%=I18n.t('dashboard.no_properties_setup')%>
+  	</h2>
+    <h2 class = "text-center trunfo-main">
+      <%=I18n.t('dashboard.click_to_create')%>
+    </h2>
+  </div>
+</div>
+<br>
+<div class = "row">
+  <div class = "col-12 text-center">
+    <%=link_to (I18n.t('property.add_button')), new_property_path,
+    data: {turbolinks: false},
+    class: "btn btn-trunfo"%>
+  </div>
+</div>

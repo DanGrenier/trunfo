@@ -11,6 +11,62 @@ $off-white: #f7f7f7;
 
 @import "~bootstrap/scss/bootstrap";
 
+//Make responsive text based on screen size
+h1 {font-size:1.5rem;}
+h2 {font-size:1.25rem;}
+h3 {font-size:1.0rem;}
+h4 {font-size:1.0rem;}
+h5 {font-size:1.0rem;}
+
+@media (min-width: 544px) {  
+  h1 {font-size:1.75rem;} /*1rem = 16px*/
+  h2 {font-size:1.50rem;}
+  h3 {font-size:1.25rem;}
+  h4 {font-size:1.25rem;}
+  h5 {font-size:1.25rem;}
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  h1 {font-size:2rem;} /*1rem = 16px*/
+  h2 {font-size:1.75rem;} /*1rem = 16px*/
+  h3 {font-size:1.50rem;} /*1rem = 16px*/
+  h4 {font-size:1.25rem;} /*1rem = 16px*/
+  h5 {font-size:1rem;} /*1rem = 16px*/
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  h1 {font-size:2.5rem;} /*1rem = 16px*/
+  h2 {font-size:2.25rem;} /*1rem = 16px*/
+  h3 {font-size:2.0rem;} /*1rem = 16px*/
+  h4 {font-size:1.75rem;} /*1rem = 16px*/
+  h5 {font-size:1.5rem;} /*1rem = 16px*/
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  h1 {font-size:3rem;} /*1rem = 16px*/    
+  h2 {font-size:2.75rem;} /*1rem = 16px*/    
+  h3 {font-size:2.50rem;} /*1rem = 16px*/    
+  h4 {font-size:2.25rem;} /*1rem = 16px*/    
+  h5 {font-size:2rem;} /*1rem = 16px*/    
+}
+
+
+
+@media (max-width: 479px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block  ;
+  }
+}
+
+
 
 .login_header{
   background-color: var(--trunfo-main);
@@ -24,6 +80,102 @@ $off-white: #f7f7f7;
 .btn-outline-trunfo {
   @include button-outline-variant(#e64a17, #222222, lighten(#e64a17,5%), #e64a17);
 }
+
+/* hides the spin-button for firefox */
+input[type=number] {
+    -moz-appearance:textfield;
+    -webkit-appearance:textfield;
+    -o-appearance:textfield;
+    -khtml-appearance:textfield;
+}
+
+/* hides the spin-button for chrome*/
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.trunfo-main
+{
+  color: var(--trunfo-main);
+}
+
+a.trunfo-main:link {
+  color: var(--trunfo-main); 
+}
+
+a.trunfo-main:hover {
+  color: var(--trunfo-light); 
+}
+
+.trunfo-dark 
+{
+  color: var(--trunfo-dark)
+}
+
+.trunfo-light
+{
+  color: var(--trunfo-light)
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden
+}
+
+.btn-file input[type=file]{
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+} 
+
+.move-left{
+  width: auto;
+  box-shadow: none;
+}
+
+.round {
+  border-radius: 50%;
+  }
+
+.property_picture {
+  border-radius: 25%  ;
+}
+.error{
+  border: 1px solid red !important;
+}
+
+.field_with_errors {
+  display: inline;
+}
+
+.field_with_errors input{
+  border: 1px solid red !important;
+}
+
+.field_with_errors select{
+  border: 1px solid red !important;
+}
+
+.table > tbody > tr:first-child > td {
+    border: none;}
+
+
+.table-properties > tbody > tr:hover {
+  background: $off-white;
+}
+
 
 /***************************************************/
 /* CSS for Error message formatting                */

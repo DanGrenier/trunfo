@@ -1,0 +1,49 @@
+fr:
+  property:
+    objectname: Propriétée
+    property_picture:
+      invalid: Le format de l'image doit être .JPG ou PNG
+    saved: Propriétée ajoutée avec succès 
+    updated: Propriétée modifiée avec succès 
+    deleted: Propriétée supprimée avec succès
+    deleted_failure: Erreur lors de la suppression de la Propriétée
+    add_button: Ajouter une Propriétée 
+    list_title: Sélectionnez une propriétée à gérer
+    list_none: Aucune propriétée trouvée 
+    edit_button: Modifier
+    save_button: Sauvegarder 
+    manage_button: Gérer
+    attached_picture: Photo de propriétée 
+    new_title:  Nouvelle propriétée
+    edit_title: Modifier la propriétée 
+    tooltip_edit: Modifier cette propriétée 
+    tooltip_managing: Propriétée courante
+    tooltip_manage: Gérer cette propriétée
+    tooltip_delete: Supprimer cette propriétée 
+    tooltip_delete_confirm: Supprimer la propriétée?
+    managing: "Propriétée Active:"
+  #=====================================================
+  #ERROR MESSAGES FOR ACTIVERECORD MODELS
+  #=====================================================
+  activerecord:
+    errors:
+      models:
+        property:
+          attributes:
+            description:
+              blank: Please enter a property description
+
+  #=====================================================
+  #LABEL HELPERS FOR FORMS
+  #=====================================================        
+  helpers:
+    label:
+      property:
+        description: "Description"
+        address: "Address"
+        city: "City"
+        state: "State"
+        zip: "Zip Code"
+        property_picture: "Picture"
+        select_new: "Select New"
+        remove_picture: "Remove"

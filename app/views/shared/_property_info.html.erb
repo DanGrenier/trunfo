@@ -1,4 +1,9 @@
-	<% if signed_in? %> 
-      No Property Selected
+	<% if signed_in?%> 
+	  <% if property_selected?%>
+	    <h6 class = "trunfo-main"><span class="font-weight-bold"><%=I18n.t('property.managing')%></span>&emsp;<%=current_property.description%></h6>
+	  </div>
+    <%else%>
+      No Properties Selected
+    <%end%>
   <%end%>
   

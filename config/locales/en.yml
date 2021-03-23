@@ -29,3 +29,7 @@ en:
         new_password: "New Password"
         current_password: "Current Password"
         password_confirmation: "Password Confirmation"
+  unauthorized_access_resource: "You are unauthorized to access this resource"
+  error_handling:
+    messages:
+      not_saved: Problem detected trying to save %{resource}

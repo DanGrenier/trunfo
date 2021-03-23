@@ -1,0 +1,87 @@
+<div class = "row">
+  <div class = "col-12">
+    <h3 class = "trunfo-main">
+      <%=I18n.t('property.list_title')%>
+    </h3>
+    <table class = "table table-sm
+                    table-properties"
+            id="properties_table">
+      <tbody>
+        <%@properties.each do |property|%>
+          <!-- Set Active class if current property -->
+          <%cust_class = (property_selected? &&
+            is_current_property?(property)) ?
+            "table-active": ""%>	
+          <!-- Show picture -->
+        	<tr class="<%=cust_class%>" style="transform: rotate(0);">
+            <!-- Show Picture or otherwise show fontawesome icon -->
+            <%if property.property_picture.attached?%>
+              <td scope = "row" class="align-middle">
+                <%= image_tag(property.thumbnail, class: "property_picture", id: "property_thumbnail")%>
+              </td>
+            <%else%>
+              <td class="align-middle">
+                <i class="fas fa-home fa-3x trunfo-main">
+                </i>
+              </td> 
+              <%end%>
+
+            <!-- Description -->
+            <td class = "align-middle"> 
+              <h5><%=property.description%></h5>
+            </td>  
+            <!-- Address -->
+            <td class = "align-middle ">
+            	<address>
+          	    <%=property.address%><br>
+          	      <%= property.address2 if property.address2
+          		    %>
+          		    <%=property.city%><br>
+          		    <%=property.state%> <%=property.zip%><br>
+          	    
+              </address>
+            </td>
+            <!-- Edit Property Link -->
+            <td class = "align-middle">
+              <%= link_with_icon(
+                  edit_property_path(id: property.id ),
+                  "edit",
+                  "edit_property_link",
+                  (I18n.t('property.edit_title')),
+                  "",
+                  false)%>
+            </td>
+            <!-- Delete Property Link -->
+            <td class = "align-middle">
+              <%=link_with_icon(
+                property_path(property),
+                "delete",
+                "delete_property_link",
+                (I18n.t('property.tooltip_delete')),
+                (I18n.t('property.tooltip_delete_confirm')),
+                true)%>
+
+            </td>
+            <!-- Manage Property Link -->
+            <td class = "align-middle">
+              <%if property_selected? && 
+                   is_current_property?(property)%>	
+                <i class="far fa-folder-open fa-2x trunfo-main" aria-hidden="true" data-html="true" data-toggle="tooltip" title="<%= I18n.t('property.tooltip_managing')%>">
+                </i> 
+              <%else%>
+                <%= link_with_icon(
+                select_property_path(id: property.id),
+                "manage",
+                "manage_property_link",
+                (I18n.t('property.tooltip_manage')),
+                "",
+                true) %>
+                  
+              <%end%>
+            </td>
+          </tr>
+        <%end%>
+      </tbody>
+    </table>  
+  </div>
+</div>

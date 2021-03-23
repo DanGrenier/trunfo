@@ -1,0 +1,49 @@
+en:
+  property:
+    objectname: Property
+    property_picture:
+      invalid: Picture needs to be .JPG or PNG format
+    saved: Property created successfully
+    updated: Property updated successfully
+    deleted: Property deleted successfully
+    deleted_failure: Property could not be deleted
+    add_button: Add Property 
+    list_title: Select property to manage 
+    list_none: No properties on file
+    edit_button: Edit
+    save_button: Save property 
+    manage_button: Manage
+    attached_picture: Property picture 
+    new_title: New Property
+    edit_title: Edit Property
+    tooltip_edit: Edit this property 
+    tooltip_managing: Current property
+    tooltip_manage: Select this property
+    tooltip_delete: Delete this property 
+    tooltip_delete_confirm: Delete this property?
+    managing: "Selected property:"
+  #=====================================================
+  #ERROR MESSAGES FOR ACTIVERECORD MODELS
+  #=====================================================
+  activerecord:
+    errors:
+      models:
+        property:
+          attributes:
+            description:
+              blank: Please enter a property description
+
+  #=====================================================
+  #LABEL HELPERS FOR FORMS
+  #=====================================================        
+  helpers:
+    label:
+      property:
+        description: "Description"
+        address: "Address"
+        city: "City"
+        state: "State"
+        zip: "Zip Code"
+        property_picture: "Picture"
+        select_new: "Select New"
+        remove_picture: "Remove"

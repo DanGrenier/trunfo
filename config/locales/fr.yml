@@ -1,4 +1,4 @@
-en:
+fr:
   number:
     currency:
       format:
@@ -29,3 +29,7 @@ en:
         new_password: "Nouveau Mot de passe"
         current_password: "Mot de passe"
         password_confirmation: "Confirmation"
+  unauthorized_access_resource: "Vous n'êtes pas autorisé à accéder à cette page"
+  error_handling:
+    messages:
+      not_saved: "Problème détecté lors de la sauvegarde de %{resource}"
